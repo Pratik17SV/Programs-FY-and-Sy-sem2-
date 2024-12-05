@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sum of Digits</title>
+<script>
+    // Function to calculate the sum of digits of a number
+    function sumOfDigits(number) {
+        let sum = 0;
+        // Convert the number to a string to iterate through each digit
+        let numString = number.toString();
+        
+        // Iterate through each digit
+        for (let i = 0; i < numString.length; i++) {
+            // Convert each digit back to number and add it to the sum
+            sum += parseInt(numString[i]);
+        }
+        
+        return sum;
+    }
+
+    // Function to handle the button click event
+    function calculateSum() {
+        // Get the input value from the user
+        let userInput = document.getElementById("numberInput").value;
+
+        // Convert user input to a number
+        let number = parseInt(userInput);
+
+        // Check if the input is a valid number
+        if (isNaN(number)) {
+            document.getElementById("result").innerHTML = "Invalid input. Please enter a valid number.";
+        } else {
+            // Calculate the sum of digits
+            let result = sumOfDigits(number);
+            document.getElementById("result").innerHTML = "Sum of digits: " + result;
+        }
+    }
+</script>
+</head>
+<body>
+    <h2>Enter a Number</h2>
+    <input type="text" id="numberInput">
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,10 @@
+body{
+    text-transform: capitalize;
+}
+#head{
+    color: white;
+    background-color: blue;
+}
+#break{
+    color: red;
+}

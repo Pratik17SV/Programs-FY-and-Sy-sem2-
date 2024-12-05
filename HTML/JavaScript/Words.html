@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Word counter</title>
+    </head>
+    <body>
+        <form>
+            <label for="num">Enter the Sentence:</label>
+            <input type="text" id="num">
+            <button type="button" onclick="count()">Calculate</button>
+            <p id="result"></p>
+        </form>
+        <script>
+            function count(){
+                let sentence = document.getElementById("num").value.trim(); // Get the input sentence and remove leading/trailing spaces
+                let wordCount = 0;
+
+                if(sentence === "") {
+                    wordCount = 0; // Handle case where input is empty
+                } else {
+                    // Split the input sentence into words based on spaces
+                    let words = sentence.split(" ");
+                    // Count the number of words
+                    wordCount = words.length;
+                }
+
+                document.getElementById("result").textContent = "The number of words in the sentence is " + wordCount + ".";
+            }
+        </script>
+    </body>
+</html>

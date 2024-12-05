@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Number Validator</title>
+</head>
+<body>
+    <h1>Mobile Number Validator</h1>
+    <input type="text" id="mobileNumber" placeholder="Enter mobile number">
+    <button onclick="validateMobileNumber()">Validate</button>
+    <p id="result"></p>
+
+
+    <script>
+        function validateMobileNumber() {
+        let mobileNumber = document.getElementById("mobileNumber").value;
+
+
+        if (isValidMobileNumber(mobileNumber)) {
+            document.getElementById("result").innerText = "Valid mobile number";
+        } else {
+            document.getElementById("result").innerText = "Invalid mobile number";
+        }
+        }
+
+
+        function isValidMobileNumber(mobileNumber) {
+            let mobileNumberVerifier = /^[6-9]\d{9}$/;
+            return mobileNumberVerifier.test(mobileNumber);
+        }
+    </script>
+</body>
+</html> 

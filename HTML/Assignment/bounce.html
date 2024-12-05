@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football Animation</title>
+<style>
+  
+  #football {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: bounce 2s infinite;
+  }
+
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+</style>
+</head>
+<body>
+  
+  <img id="football" src="Football.png" alt="Football">
+
+  <script>
+
+    const football = document.getElementById('football');
+    
+    football.addEventListener('mouseenter', () => {
+      football.style.animationPlayState = 'paused';
+    });
+
+    football.addEventListener('mouseleave', () => {
+      football.style.animationPlayState = 'running';
+    });
+  </script>
+</body>
+</html>
+

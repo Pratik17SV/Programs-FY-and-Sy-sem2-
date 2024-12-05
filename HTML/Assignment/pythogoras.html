@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Pythogores
+        </title>
+    </head>
+    <body>
+        Enter value for base:<input type="number" id="n1"required='min="1"max="10"'><br><br>
+        Enter value for Side:<input type="number" id="n2"><br><br>
+        Enter value for hypotanous:<input type="number" id="n3"><br><br>
+        <button onclick="trip()">Check</button>
+        <script>
+            function trip(){
+                let a = document.getElementById("n1").value;
+                let b = document.getElementById("n2").value;
+                let c = document.getElementById("n3").value;
+                if(a>=1&&a<=10)
+                {
+                    if(b>=1&&b<=10)
+                    {
+                        if(c>=1&&c<=10)
+                        {
+                            if((a*a)+(b*b)==(c*c))
+                {
+                    document.write('<h1>It is Pythagoras triplet</h1>');                    
+                }
+                else
+                {
+                    document.write('<h1>It is not a Pythagoras triplet</h1>');
+                }
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

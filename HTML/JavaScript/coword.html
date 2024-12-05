@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            count wourd in  the sentence;
+        </title>
+    </head>
+    <script>
+        let str = prompt("Enter the String:");
+        let i,w=0,s=0;
+        for(i=0;i<=str.length;i++)
+        {
+            if(str.charAt(i)==' ')
+            {
+                s++;
+            }
+            else
+            {
+                w++;
+            }
+        }
+        document.write("You enter :"+str+" which has :")
+        document.write("The total words are:"+w+" and the spaces are:"+s);
+    </script>
+</html>

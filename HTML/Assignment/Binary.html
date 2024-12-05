@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Binary conversion
+        </title>
+        <style>
+            #result{
+                background-color: greenyellow;
+                font-size: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Binary Converator</h1>
+        <input type="number" id="B">
+        <button onclick="decimal()">BtoD</button>
+        <h2 id="result"></h2>
+        <script>
+            function decimal() 
+    {
+      let binaryInput = document.getElementById("B").value;
+      let d = parseInt(binaryInput,2)
+     document.getElementById("result").innerText = "Decimal Equivalent: " + d;
+    }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Count Words Starting with Vowel</title>
+    </head>
+    <body>
+        <h1>Enter the Sentence:</h1>
+        <input type="text" id="sentence">
+        <button onclick="count()">Count</button>
+        <h2 id="result"></h2>
+        <script>
+            function count() {
+                let sentence = document.getElementById("sentence").value.toLowerCase(); // convert sentence to lowercase
+                let words = sentence.split(" "); // split the sentence into words
+                let count = 0;
+
+                // iterate through each word
+                for (let i = 0; i < words.length; i++) {
+                    let firstLetter = words[i].charAt(0); // get the first letter of the word
+                    // check if the first letter is a vowel
+                    if (firstLetter === 'a' || firstLetter === 'e' || firstLetter === 'i' || firstLetter === 'o' || firstLetter === 'u') {
+                        count++;
+                    }
+                }
+
+                document.getElementById("result").innerText = 'Number of words starting with a vowel: ' + count;
+            }
+        </script>
+    </body>
+</html>

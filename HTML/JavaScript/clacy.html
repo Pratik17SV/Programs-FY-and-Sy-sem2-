@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calgy</title>
+    </head>
+    <body>
+        <form>
+            Enter no1:
+            <input type="number" id="n1">
+            <br><br>
+            Enter no2:
+            <input type="number" id="n2">
+            <br><br>
+            Enter sign: (+, -, /, *)
+            <input type="text" id="s">
+            <br><br>
+            <button onclick="calculate()">Calculate</button>
+        </form>
+        <h1 id="result"></h1>
+        <script>
+            function calculate() {
+                let n1 = parseFloat(document.getElementById("n1").value);
+                let n2 = parseFloat(document.getElementById("n2").value);
+                let s = document.getElementById("s").value;
+                let result = 0;
+                switch(s) {
+                    case '+':
+                        result = n1 + n2;
+                        break;
+                    case '-':
+                        result = n1 - n2;
+                        break;
+                    case '*':
+                        result = n1 * n2;
+                        break;
+                    case '/':
+                        result = n1 / n2;
+                        break;
+                    default:
+                        result = "Wrong value entered";
+                        break;
+                }
+                document.write("<h1>The result is:"+result+" </h1>")
+            }
+        </script>
+    </body>
+</html>

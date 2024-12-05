@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Number to Words Converter</title>
+</head>
+<body>
+
+<h2>Number to Words Converter</h2>
+<p>Enter a number between 0 and 100:</p>
+<input type="number" id="inputNumber">
+<button onclick="convertAndDisplay()">Convert</button>
+<p id="result"></p>
+<script>
+    function numberToWords(number) {
+        
+        const singleDigits = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+        const twoDigits = ["", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+        
+        const specialTwoDigits = ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+        
+        function convertTwoDigits(num) {
+            if (num < 10) {
+                return singleDigits[num];
+            } else if (num < 20) {
+                return specialTwoDigits[num - 10];
+            } else {
+                const tensDigit = Math.floor(num / 10);
+                const onesDigit = num % 10;
+                return twoDigits[tensDigit] + "-" + singleDigits[onesDigit];
+            }
+        }
+        
+        if (number < 0 || number > 100) {
+            return "Number out of range. Please enter a number between 0 and 100.";
+        }
+    
+        if (number === 100) {
+            return "One Hundred";
+        }
+    
+        if (number < 10) {
+            return singleDigits[number];
+        } else if (number < 20) {
+            return specialTwoDigits[number - 10];
+        } else {
+            const hundredsDigit = Math.floor(number / 100);
+            const remainingTwoDigits = number % 100;
+            const remainingTwoDigitsInWords = convertTwoDigits(remainingTwoDigits);
+            if (remainingTwoDigits === 0) {
+                return singleDigits[hundredsDigit] + " Hundred";
+            } else {
+                return singleDigits[hundredsDigit] + " Hundred " + remainingTwoDigitsInWords;
+            }
+        }
+    }
+    
+    function convertAndDisplay() {
+        const number = parseInt(document.getElementById("inputNumber").value);
+        const result = numberToWords(number);
+        document.getElementById("result").innerText = result;
+    }
+    </script>
+</body>
+</html>

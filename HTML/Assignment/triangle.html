@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pascal Triangle</title>
+</head>
+<body>
+    <p id="pascal"></p>
+    <script>
+        function pascalTriangle() {
+        let outerValue, innerValue, spaces;
+        let rows = prompt("Enter number of rows");
+
+
+        for(outerValue = 0; outerValue <= rows; outerValue++) {
+            for(spaces = rows; spaces > outerValue; spaces--) {
+                document.write("&nbsp;&nbsp;");
+            }
+            num = 1;
+            for(innerValue = 0; innerValue <= outerValue; innerValue++) {
+                document.write(`${num} `);
+                num = (num * (outerValue - innerValue) / (innerValue + 1));
+            }
+            document.write(`<br>`)
+            }
+            }
+
+
+            pascalTriangle();
+    </script>
+</body>
+</html>
