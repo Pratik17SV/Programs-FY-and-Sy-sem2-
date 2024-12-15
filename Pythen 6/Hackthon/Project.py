@@ -35,41 +35,44 @@ def clear_results():
 # Initialize the main application window
 root = tk.Tk()
 root.title("Micro-Credit Scoring Tool")
-root.geometry("400x400")
+root.geometry("400x500")
+root.configure(bg="#f0f8ff")
 
 # Title Label
-title_label = tk.Label(root, text="Instant Micro-Credit Scoring", font=("Arial", 16, "bold"))
-title_label.pack(pady=10)
+title_label = tk.Label(root, text="Instant Micro-Credit Scoring", font=("Arial", 16, "bold"), bg="#4682b4", fg="white", pady=10)
+title_label.pack(fill="x")
 
 # Email Scan Button
-scan_button = tk.Button(root, text="Scan Gmail for Financial Records", command=scan_email)
-scan_button.pack(pady=10)
+scan_button = tk.Button(root, text="Scan Gmail for Financial Records", command=scan_email, bg="#5f9ea0", fg="white", font=("Arial", 12), relief="ridge", bd=3)
+scan_button.pack(pady=15)
 
 # Input Fields
-input_frame = tk.Frame(root)
-input_frame.pack(pady=10)
+input_frame = tk.Frame(root, bg="#f0f8ff")
+input_frame.pack(pady=20)
 
-daily_sales_label = tk.Label(input_frame, text="Daily Sales ($):")
+daily_sales_label = tk.Label(input_frame, text="Daily Sales ($):", bg="#f0f8ff", font=("Arial", 10))
 daily_sales_label.grid(row=0, column=0, padx=5, pady=5, sticky="e")
-daily_sales_entry = tk.Entry(input_frame)
+daily_sales_entry = tk.Entry(input_frame, font=("Arial", 10), bg="#ffffff", fg="#000000", relief="solid")
 daily_sales_entry.grid(row=0, column=1, padx=5, pady=5)
 
-goods_type_label = tk.Label(input_frame, text="Type of Goods Sold:")
+goods_type_label = tk.Label(input_frame, text="Type of Goods Sold:", bg="#f0f8ff", font=("Arial", 10))
 goods_type_label.grid(row=1, column=0, padx=5, pady=5, sticky="e")
-goods_type_entry = tk.Entry(input_frame)
+goods_type_entry = tk.Entry(input_frame, font=("Arial", 10), bg="#ffffff", fg="#000000", relief="solid")
 goods_type_entry.grid(row=1, column=1, padx=5, pady=5)
 
 # Generate Credit Score Button
-generate_button = tk.Button(root, text="Generate Credit Score", command=generate_credit_score)
-generate_button.pack(pady=10)
+generate_button = tk.Button(root, text="Generate Credit Score", command=generate_credit_score, bg="#32cd32", fg="white", font=("Arial", 12), relief="ridge", bd=3)
+generate_button.pack(pady=15)
 
 # Result Label
-result_label = tk.Label(root, text="", font=("Arial", 12), justify="left")
+result_frame = tk.Frame(root, bg="#f0f8ff")
+result_frame.pack(pady=10, fill="both", expand=True)
+result_label = tk.Label(result_frame, text="", font=("Arial", 12), bg="#f0f8ff", fg="#000000", justify="left")
 result_label.pack(pady=10)
 
 # Clear Button
-clear_button = tk.Button(root, text="Clear", command=clear_results)
-clear_button.pack(pady=10)
+clear_button = tk.Button(root, text="Clear", command=clear_results, bg="#ff4500", fg="white", font=("Arial", 12), relief="ridge", bd=3)
+clear_button.pack(pady=15)
 
 # Run the application
 root.mainloop()
