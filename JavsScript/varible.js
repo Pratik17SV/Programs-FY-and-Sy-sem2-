@@ -45,6 +45,18 @@ var red = true;
 var green = false;
 if(red){
     console.log("This is true");
-}else{
+}
+else{
     console.log("This is false");
+}
+
+//else if statement
+if (green){
+    console.log("This is green");
+}
+else if(red){
+    console.log("This is else if");
+}
+else{
+    console.log("This is else statement.");
 }
