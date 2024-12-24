@@ -76,3 +76,21 @@ switch (n) {
         console.log("This is default case");
         break;
 }
+
+
+//and && or|| 
+var a = 10;
+var b = 20;
+//and &&
+if(a > 10 && b > 10){
+    console.log("This is and statement");
+}else{
+    console.log("This is else statement");
+}
+
+//or ||
+if(a > 10 || b > 10){
+    console.log("This is or statement");
+}else{
+    console.log("This is else statement");
+}
