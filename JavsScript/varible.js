@@ -39,3 +39,12 @@ console.log(animal);
 animal.splice(2,1);
 console.log(animal);
 console.log(animal.sort());
+
+//if else statement
+var red = true;
+var green = false;
+if(red){
+    console.log("This is true");
+}else{
+    console.log("This is false");
+}
