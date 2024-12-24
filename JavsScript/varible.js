@@ -60,3 +60,19 @@ else if(red){
 else{
     console.log("This is else statement.");
 }
+
+//Switch case statement
+switch (n) {
+    case 1:
+        console.log("This is case 1");
+        break;
+    case 2: 
+        console.log("This is case 2");
+        break;
+    case 3:
+        console.log("This is case 3");
+        break;
+    default:
+        console.log("This is default case");
+        break;
+}
