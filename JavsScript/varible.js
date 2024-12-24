@@ -112,5 +112,12 @@ for (var j = 0; j < arr.length; j++)
 var fruits = ['apple', 'banana', 'cherry'];
 for (var fruit of fruits) {
     console.log(fruit+"\n");
-    document.write("\n"+fruit);
+    //document.write("\n"+fruit);
+}
+
+//while loop 
+var i = 0;
+while (i < 10) {
+    console.log(i);
+    i++;
 }
