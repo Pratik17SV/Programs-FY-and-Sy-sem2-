@@ -94,3 +94,23 @@ if(a > 10 || b > 10){
 }else{
     console.log("This is else statement");
 }
+
+//for loop
+var i;
+for (i = 0; i<500; i++) {
+    console.log(i);
+    // document.write(i+"<br>");
+}
+
+for (var j = 0; j < arr.length; j++)
+{
+    console.log(arr[j]);
+    document.write(arr[j]);
+} 
+
+// for of loop
+var fruits = ['apple', 'banana', 'cherry'];
+for (var fruit of fruits) {
+    console.log(fruit+"\n");
+    document.write("\n"+fruit);
+}
