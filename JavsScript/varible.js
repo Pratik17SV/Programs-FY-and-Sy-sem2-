@@ -121,3 +121,23 @@ while (i < 10) {
     console.log(i);
     i++;
 }
+
+// string method
+var Str = "I am hungary!"
+console.log("This is upper case string",Str.toUpperCase());
+
+// find the location of the word or letter
+console.log(Str.search('am'));
+// sub string method 
+console.log(Str.substring(2,3));
+// replace method
+console.log(Str.replace('am','am realy'));
+
+// string Concatenation with array.
+var arrstr = "Hello ";
+var array = ['chees','pai','Breakfast','Launch'];
+for (var i = 0; i < array.length; i++) 
+    {
+        console.log(arrstr+array[i]);   
+    }
+
