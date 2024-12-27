@@ -6,6 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1 id="hello"></h1>
+    <label for="name">Enter name:</label>
+    <input type="text" id="name">
+    <input type="submit">
+    <script>
+        function name(){
+            var name = document.getElementById("name").value;
+            document.getElementById("hello")="Hello",name;
+        }
+        function sum(n1,n2){
+            return n1+n2;
+        }
+        sum = (4,8);
+        //math function
+        console.log(Math.random());
+        //
+        function randomInt(max , min){
+            numOfValue = max -min +1
+            console.log(numOfValue);
+        }
+        randomInt(10,5);
+    </script>
 </body>
 </html>
