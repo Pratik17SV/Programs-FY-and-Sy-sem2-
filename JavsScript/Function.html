@@ -6,15 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="hello"></h1>
+    <h1></h1>
     <label for="name">Enter name:</label>
     <input type="text" id="name">
-    <input type="submit">
+    <input type="submit"id="hello" >
     <script>
+        var sub = document.getElementById("hello");
         function name(){
-            var name = document.getElementById("name").value;
-            document.getElementById("hello")="Hello",name;
+            var names = document.getElementById("name");
+            alert("Hello , " + names);
         }
+        sub.onclick=name;
         function sum(n1,n2){
             return n1+n2;
         }
