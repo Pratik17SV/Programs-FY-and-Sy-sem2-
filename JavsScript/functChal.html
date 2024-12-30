@@ -4,15 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <!-- chalange 17 -->
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde eum atque exercitationem minus ipsum soluta quas laudantium odio aliquam expedita placeat at, ad a officia officiis fugiat ipsam? Cumque, hic.</p>
-    <div id="copy">
-        copyright
+    <div>
+        <!-- challange 17 -->
+        <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde eum atque exercitationem minus ipsum soluta quas laudantium odio aliquam expedita placeat at, ad a officia officiis fugiat ipsam? Cumque, hic.</p>
+        <div id="copy">
+            copyright
+        </div>
+        <script>
+            document.getElementById('copy').style.color="green";
+        </script> -->
     </div>
-    <script>
-        document.getElementById('copy').style.color="green";
-    </script>
+    <!-- <div style="margin-right: 75%;">
+        challange 18
+        <article>
+            <h2>Article Title</h2>
+            <br>
+            <br>
+            <div class="green">
+                Today's Date
+                <br>
+                <br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti perferendis porro animi labore, voluptatem beatae accusamus nobis at aliquam, neque ratione culpa provident nemo, quia consectetur incidunt magnam? Nemo, repudiandae!
+            </div>
+            <p style="margin: 5% 10%">"You're brave than you belive, and strong than <br>you seem, and smarter than you think."<br> - Christopher Robin</p>
+            <div class="green">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, eaque facilis neque aperiam, soluta consequatur iste, architecto omnis culpa voluptate quidem numquam ratione quasi reiciendis fugiat. Laborum, doloribus. Mollitia, fuga!
+            </div>
+            <script>
+                var gr = document.getElementsByClassName('green');
+                for (var i = 0; i < gr.length; i++) {
+                    gr[i].style.color = "green";
+                }
+            </script>
+        </article>
+    </div> -->
+    <div>
+        <h1>Page Tiltle</h1>
+        Some basic information about this pages.
+        <h2>Articale Tiltle</h2>
+        <h3 id="date">Today's Date</h3>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, porro. Hic quia voluptate voluptates tempore tenetur accusamus cumque enim? Ratione porro dolor culpa soluta ab, harum pariatur ad rem ipsa!
+        <script>
+            var heading = document.getElementsByTagName("h1");
+            heading[0].className = "red";
+
+            var date = document.getElementById('date');
+            date.className="red";
+        </script>
+    </div>
 </body>
 </html>
