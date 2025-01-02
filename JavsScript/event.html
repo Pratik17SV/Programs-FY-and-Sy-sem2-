@@ -11,11 +11,17 @@
     <button>Dont't click me</button>
     <script>
         var button = document.querySelector('button');
+        //event 1
         // button.onclick = function (){
         //     alert('ouch');
         // }
-        // OR
-        button.addEventListener('click', function(){alert('ouch');})
+        // event 2
+        //button.addEventListener('click', function(){alert('ouch');})
+        // event 3
+        button.addEventListener('click',function(event){
+            event.target.style.backgroundColor = 'red';
+            alert('ouch');
+        })
     </script>
 </body>
 </html>
