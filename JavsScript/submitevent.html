@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get">
+        <label>Name: <input type="text" name="name"></label>
+        <input type="submit">
+    </form>
+    <script>
+        var form = document.querySelector('form');
+        form .addEventListener('submit', function(event) {
+            event.preventDefault();
+            var name = document.querySelector('input').value;
+            alert('Form s');
+        })
+    </script>
+</body>
+</html>
