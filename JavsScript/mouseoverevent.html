@@ -19,7 +19,15 @@
     <script>
         var div = document.querySelector('div');
         var heading = document.querySelector('h1');
-
+        div.addEventListener('mouseover',function(){
+            heading.innerHTML="The mouse is over the box."
+        });
+        div.addEventListener('mouseout',function(){
+            heading.innerHTML="The mouse is not over the box."
+        });
+        heading.addEventListener('mouseover',function(){
+            heading.innerHTML="Role your mouse has left the box.";
+        });
         
     </script>
 </body>
