@@ -11,10 +11,11 @@
     <button>Dont't click me</button>
     <script>
         var button = document.querySelector('button');
-        button.onclick = function (){
-            alert('ouch');
-        }
-
+        // button.onclick = function (){
+        //     alert('ouch');
+        // }
+        // OR
+        button.addEventListener('click', function(){alert('ouch');})
     </script>
 </body>
 </html>
