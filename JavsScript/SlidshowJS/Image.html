@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myimage{
+            width: auto;
+            height: 300px;
+        } 
+    </style>
+</head>
+<body>
+    <div>
+        <img src="image1.jpg" alt="myimage" id="myimage">
+    </div>
+    <p><a href="#" id="Previous">Previous</a>--------<a href="#" id="next">Next</a></p>
+    <script>
+        var myimage = ["image1.jpg","image2.jpg","image3.jpg","image4.jpg"];
+        var currentimage = 0;
+        document.getElementById('next').onclick= nextphoto;
+        function nextphoto(){
+            
+            if(currentimage >= (myimage.length-1)){
+                currentimage=0;
+            }else{
+                currentimage++;
+            }
+
+            document.getElementById('myimage').src = myimage[currentimage];
+        }
+        
+
+    </script>
+</body>
+</html>
