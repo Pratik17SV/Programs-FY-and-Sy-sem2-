@@ -31,6 +31,16 @@
             document.getElementById('myimage').src = myimage[currentimage];
         }
         
+        document.getElementById('Previous').onclick=Previous;
+        function Previous(){
+            if(currentimage <= 0){
+                currentimage=myimage.length-1;
+            }
+            else{
+                currentimage--;
+            }
+            document.getElementById('myimage').src = myimage[currentimage];
+        }
 
     </script>
 </body>
