@@ -1,5 +1,5 @@
-var myimage = ["image1.jpg","image2.jpg","image3.jpg","image4.jpg"];
-var currentimage = 0;
+const myimage = ["image1.jpg","image2.jpg","image3.jpg","image4.jpg"];
+let currentimage = 0;
 document.getElementById('next').onclick= nextphoto;
 function nextphoto(){
     
