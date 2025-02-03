@@ -1,19 +1,19 @@
 class Mathematics{
-  int _num = 0;
-  int _den = 0;
+  int num = 0;
+  int den = 0;
   // Customized Setter Function 
   void set setnumerator(int val){
-    _num = val * 6;
+    num = val * 6;
   }
   void set setdenometer(int val){
-    _den = val * 10;
+    den = val * 10;
   }
   // Customized getter
   int get getnumerator {
-    return _num;
+    return num;
   }
   int get getdenometer{
-    return _den;
+    return den;
   }
 }
 void main(){
