@@ -1,11 +1,11 @@
+fact(number) {
+  if (number <= 0) {
+    return 1;
+  } else {
+    return number * (fact(number - 1));
+  }
+}
 
-factorial(number) { 
-   if (number <= 0) {         
-      return 1; 
-   } else { 
-      return (number * factorial(number - 1));    
-   } 
-} 
-void main() { 
-   print(factorial(6));
-}  
+void main() {
+  print(fact(5));
+}

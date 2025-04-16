@@ -1,27 +1,30 @@
-class Mathematics{
-  int num = 0;
-  int den = 0;
-  // Customized Setter Function 
-  void set setnumerator(int val){
-    num = val * 6;
-  }
-  void set setdenometer(int val){
-    den = val * 10;
-  }
+class Mathematics {
+  int num1 = 0;
+  int num2 = 0;
+  // Customized Setter Function
+
   // Customized getter
-  int get getnumerator {
-    return num;
+  int get getnum1 {
+    return num1;
   }
-  int get getdenometer{
-    return den;
+
+  int get getnum2 {
+    return num2;
+  }
+
+  void set setnum1(int val) {
+    num1 = val * val;
+  }
+
+  void set setnum2(int val) {
+    num2 = val * val;
   }
 }
-void main(){
+
+void main() {
   Mathematics m = new Mathematics();
-  m.setnumerator = 5;
-  m.setdenometer = 6;
-  print(m.getnumerator);
-  print(m.getdenometer);
+  m.setnum1 = 5;
+  m.setnum2 = 6;
+  print(m.getnum1);
+  print(m.getnum2);
 }
-
-
